@@ -4,7 +4,7 @@
 
 ## מהות המשחק
 
-
+The game is a thrilling and fast-paced multiplayer experience where players find themselves in a room with a 10-second countdown. Upon reaching zero, the floor opens, plunging everyone into a dynamic arena filled with obstacles and varying terrain. One player takes on the role of the catcher, attempting to tag others, while those caught exit the arena. The objective is for the catcher to catch everyone before the game ends, symbolized by a giant red cap on screen, or for the remaining players to successfully evade capture, signifying their escape from the challenging environment.
 
 לאיזה פלטפורמה מיועד המשחק שלכם (כגון: מחשב רגיל / טלפון נייד / אינטרנט)?
 
@@ -14,9 +14,6 @@
 
 
 ## רכיבים רשמיים
-
-ענו על השאלות הבאות לגבי הרכיבים הרשמיים של המשחק
-(החליפו את הטקסט של השאלות בתשובות שלכם).
 
 המחישו את התשובות שלכם בעזרת ציורי-מסך.
 
@@ -28,8 +25,9 @@
 
 ### 2. יעדים
 
-* מה הם היעדים שהשחקן צריך להשיג כדי לנצח במשחק?
-* איך המשחק יודיע לשחקן את היעדים שלו? 
+Ther Catcher's aim is to tag and catch all other players within the specified time limit. The game informs the catcher of their goal through on-screen prompts and visual cues, such as a counter indicating the number of players left to catch and a prominent timer.
+
+The game employs clear and intuitive visual elements, such as on-screen text, and symbols, to communicate objectives to players. Additionally, audio cues and dynamic animations may enhance the player's understanding of their goals and the overall progress of the game.
 
 
 ### 3. תהליכים
@@ -80,9 +78,10 @@
 
 ### 8. תוצאות
 
-* כמה תוצאות אפשריות יהיו למשחק, ומה הן יהיו? 
-* עד כמה התוצאה תלויה במזל לעומת כישרון? 
-* האם המשחק יהיה "סכום אפס", שיתופי, או מורכב?
+The game has two possible outcomes the first is the catcher victory. The catcher wins if they successfully tag and catch all the other players within the given time limit. This outcome depends on the catcher's skill in pursuing and tagging opponents.
+The second is the loss of the catcher. The cather looses if at least one player manages to avoid being caught until the end of the game. 
+
+The outcome of the game is primarily determined by the players' skills and decisions, making it more about talent than luck. The game is competitive, not cooperative, as players either compete against each other or the designated catcher.
 
 ---
 
