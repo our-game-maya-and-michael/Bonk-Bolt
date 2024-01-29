@@ -11,6 +11,8 @@ Play game here- [itch.io](https://mayamichael.itch.io/bonk-bolt)
 
 [Formal Elements](https://github.com/our-game-maya-and-michael/Bonk-Bolt/blob/main/formal-elements.md)
 
+![image](https://github.com/our-game-maya-and-michael/Bonk-Bolt/assets/85742675/bbbd667b-25f2-40fa-90dc-89a9739e19d8)
+
 ### Credits
 * [Hinge Joints on Doors](https://www.youtube.com/watch?v=HaLGYIYqPug&ab_channel=LittleOwlGaming-Unity3dTutorialsWithBrokn)
 * [Random AI Patrolling](https://github.com/JonDevTutorial/RandomNavMeshMovement)
