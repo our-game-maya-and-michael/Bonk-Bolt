@@ -12,6 +12,6 @@ Intended Platform: PC
 
 ![image](https://github.com/our-game-maya-and-michael/Bonk-Bolt/assets/85742675/bbbd667b-25f2-40fa-90dc-89a9739e19d8)
 
-# Credits
+### Credits
 [Hinge Joints on Doors](https://www.youtube.com/watch?v=HaLGYIYqPug&ab_channel=LittleOwlGaming-Unity3dTutorialsWithBrokn)
 [Random AI Patrolling](https://github.com/JonDevTutorial/RandomNavMeshMovement)
