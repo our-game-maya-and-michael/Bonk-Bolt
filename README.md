@@ -14,4 +14,5 @@ Intended Platform: PC
 
 ### Credits
 [Hinge Joints on Doors](https://www.youtube.com/watch?v=HaLGYIYqPug&ab_channel=LittleOwlGaming-Unity3dTutorialsWithBrokn)
+
 [Random AI Patrolling](https://github.com/JonDevTutorial/RandomNavMeshMovement)
