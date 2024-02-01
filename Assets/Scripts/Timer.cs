@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
 {
     [Tooltip("seconds")]
     [SerializeField]
-    float timeValue = 90;
+    float timeValue = 60;
 
     [Tooltip("dispay text")]
     [SerializeField]
