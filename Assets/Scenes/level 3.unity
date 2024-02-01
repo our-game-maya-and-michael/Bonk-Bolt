@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 188120535}
   range: 20.5
-  centrePoint: {fileID: 174837102}
+  centerPoint: {fileID: 174837102}
 --- !u!136 &188120537
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1852,7 +1852,6 @@ GameObject:
   - component: {fileID: 572388617}
   - component: {fileID: 572388616}
   - component: {fileID: 572388615}
-  - component: {fileID: 572388614}
   - component: {fileID: 572388613}
   m_Layer: 0
   m_Name: Level 3
@@ -1953,14 +1952,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 572388616}
   m_maskType: 0
---- !u!222 &572388614
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572388611}
-  m_CullTransparentMesh: 1
 --- !u!64 &572388615
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2239,7 +2230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 643415188}
   range: 20.5
-  centrePoint: {fileID: 174837102}
+  centerPoint: {fileID: 174837102}
 --- !u!136 &643415190
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2437,7 +2428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 664310308}
   range: 20.5
-  centrePoint: {fileID: 174837102}
+  centerPoint: {fileID: 174837102}
 --- !u!136 &664310310
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2931,7 +2922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 832571475}
   range: 20.5
-  centrePoint: {fileID: 174837102}
+  centerPoint: {fileID: 174837102}
 --- !u!136 &832571477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4792,7 +4783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggeringTag: Player
   triggeringCount: 5
-  nextScene: WinGame
+  nextScene: level 4
 --- !u!114 &1874405304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4984,7 +4975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1887944905}
   range: 20.5
-  centrePoint: {fileID: 174837102}
+  centerPoint: {fileID: 174837102}
 --- !u!136 &1887944907
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5134,7 +5125,6 @@ GameObject:
   - component: {fileID: 1976101655}
   - component: {fileID: 1976101654}
   - component: {fileID: 1976101653}
-  - component: {fileID: 1976101652}
   - component: {fileID: 1976101651}
   - component: {fileID: 1976101650}
   m_Layer: 0
@@ -5251,14 +5241,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1976101654}
   m_maskType: 0
---- !u!222 &1976101652
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976101649}
-  m_CullTransparentMesh: 1
 --- !u!64 &1976101653
 MeshCollider:
   m_ObjectHideFlags: 0
