@@ -1,3 +1,5 @@
+# Dramatic Elements 
+
 ## Challenge
 * To play the game, the player needs to plan a strategy to catch the other players, rather than catch them randomly.
 * At the beginning of the game the player will manually choose between 2 options. The first option is a smooth movement of the player and the second option is a movement with physical components such as acceleration, which makes controlling the player more difficult, and the game more challenging.
