@@ -16,8 +16,7 @@
 * To make the game appeal to other sorts of players we can add a scoreboard to keep track of which player completed the level the fastes to bring competitive players and also add skins to the characters to try and get the collecters to play the game.
 
 ## Emotions
-* The purpose of the game is to convey a childhood experience. Each one of us played catch with our friends or siblings, so the emotion we expect to feel is a childhood memory, excitement and joy.
-In addition, the player will feel some adrenaline because the game is challenging and the desire to pass each level increases.
+* The purpose of the game is to convey a childhood experience. Each one of us played catch with our friends or siblings, so the emotion we expect to feel is a childhood memory, excitement and joy. In addition, the player will feel some adrenaline because the game is challenging and the desire to pass each level increases.
 * In order to convey the experience of childhood, the graphics of the game will be in places where children play, for example at home with their siblings, at school with their friends or at a playground.
 
 ## Premise
