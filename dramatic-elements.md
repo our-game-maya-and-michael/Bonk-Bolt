@@ -14,7 +14,9 @@
 * The feedback for success will be a transition screen where it is written that the player passed the level successfully and for failure there will also be a transition screen and the player will return to the same level again.
 
 ## Play
-
+* 
+* This game is supposed to be for the achievers because the more rounds you pass the harder the game gets.
+* To make the game appeal to other sorts of players we can add a scoreboard to keep track of which player completed the level the fastes to bring competitive players and also add skins to the characters to try and get the collecters to play the game.
 
 ## Emotions
 
@@ -34,7 +36,9 @@ In addition, the player will feel some adrenaline because the game is challengin
 * The catcher is controled by the player and the other characters will move randomly using AI and try to escape from the catcher.
 
 ## Plot
-
+* The plot will be very linear because there is no plot, its just a good old game of tag !
+* There will be no plot but the more levels you complete the harder it will get.
+* If the player will think stratigic and be quick on his feet to catch all of the other players he will advance to the next levels that are harder.
 
 ## World-Building
 
