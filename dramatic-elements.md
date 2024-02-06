@@ -14,7 +14,7 @@
 * The feedback for success will be a transition screen where it is written that the player passed the level successfully and for failure there will also be a transition screen and the player will return to the same level again.
 
 ## Play
-* 
+* To keep the player in focus on the game and also because of the pressure from the timer to complete the level as fast as you can, you cant do any-thing except from catch the other players.
 * This game is supposed to be for the achievers because the more rounds you pass the harder the game gets.
 * To make the game appeal to other sorts of players we can add a scoreboard to keep track of which player completed the level the fastes to bring competitive players and also add skins to the characters to try and get the collecters to play the game.
 
