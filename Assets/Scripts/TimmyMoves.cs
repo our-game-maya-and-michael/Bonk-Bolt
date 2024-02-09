@@ -8,8 +8,9 @@ public class TimmyMoves : MonoBehaviour
     public Rigidbody playerRigid;
     public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
     public bool walking;
+    public bool running;
     public Transform playerTrans;
-
+    private bool isAnimationDone = false;
 
     void FixedUpdate()
     {
@@ -24,31 +25,28 @@ public class TimmyMoves : MonoBehaviour
     }
     void Update()
     {
+        AnimatorStateInfo stateInfo = playerAnim.GetCurrentAnimatorStateInfo(0); // 0 for the first layer
         if (Input.GetKeyDown(KeyCode.W))
         {
             playerAnim.SetTrigger("walk");
             playerAnim.ResetTrigger("idle");
             walking = true;
-            //steps1.SetActive(true);
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             playerAnim.ResetTrigger("walk");
             playerAnim.SetTrigger("idle");
             walking = false;
-            //steps1.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnim.SetTrigger("walkback");
             playerAnim.ResetTrigger("idle");
-            //steps1.SetActive(true);
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
             playerAnim.ResetTrigger("walkback");
             playerAnim.SetTrigger("idle");
-            //steps1.SetActive(false);
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -62,19 +60,37 @@ public class TimmyMoves : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                //steps1.SetActive(false);
-                //steps2.SetActive(true);
                 w_speed = w_speed + rn_speed;
                 playerAnim.SetTrigger("run");
+                running = true;
                 playerAnim.ResetTrigger("walk");
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                //steps1.SetActive(true);
-                //steps2.SetActive(false);
                 w_speed = olw_speed;
                 playerAnim.ResetTrigger("run");
+                running = false;
                 playerAnim.SetTrigger("walk");
+            }
+        }
+        if (running == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerAnim.SetTrigger("flip");
+                playerAnim.ResetTrigger("run");
+            }
+            if (stateInfo.IsName("flip") && stateInfo.normalizedTime >= 1)
+            {
+                if (!isAnimationDone)
+                {
+                    playerAnim.SetTrigger("run");
+                    playerAnim.ResetTrigger("flip");
+                }
+            }
+            else
+            {
+                isAnimationDone = false;
             }
         }
     }
