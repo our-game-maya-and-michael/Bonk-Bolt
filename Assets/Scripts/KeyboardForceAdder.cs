@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
  *  Works with a 3D RigidBody.
  */
 [RequireComponent(typeof(Rigidbody))]
-public class KeyboardForceAdder : MonoBehaviour {
+public class KeyboardForceAdder : MonoBehaviour
+{
     [Tooltip("The horizontal force that the player's feet use for walking, in newtons.")]
     [SerializeField] float walkForce = 5f;
     [SerializeField] InputAction moveRL;
@@ -18,11 +19,12 @@ public class KeyboardForceAdder : MonoBehaviour {
     [SerializeField] float jumpImpulse = 5f;
     [SerializeField] InputAction jump;
 
-    [Range(0,1f)]
+    [Range(0, 1f)]
     [SerializeField] float slowDownAtJump = 0.5f;
 
 
-    void OnValidate() {
+    void OnValidate()
+    {
         // Provide default bindings for the input actions.
         // Based on answer by DMGregory: https://gamedev.stackexchange.com/a/205345/18261
         if (jump == null)
@@ -46,26 +48,30 @@ public class KeyboardForceAdder : MonoBehaviour {
     }
 
     private Rigidbody rb;
-    void Start() {
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
     }
 
     private ForceMode walkForceMode = ForceMode.Force;
     private ForceMode jumpForceMode = ForceMode.Impulse;
     private bool playerWantsToJump = false;
-    private void OnEnable() {
+    private void OnEnable()
+    {
         moveRL.Enable();
         moveFB.Enable();
         jump.Enable();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         moveRL.Disable();
         moveFB.Disable();
         jump.Disable();
     }
 
-    private void Update() {
+    private void Update()
+    {
         // Keyboard events are checked each frame, so we should check them in Update.
         if (jump.WasPressedThisFrame())
             playerWantsToJump = true;
@@ -74,17 +80,19 @@ public class KeyboardForceAdder : MonoBehaviour {
     /*
      * Note that updates related to the physics engine should be done in FixedUpdate and not in Update!
      */
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
 
-            float rightLeft = moveRL.ReadValue<float>();
-            rb.AddForce(new Vector3(rightLeft * walkForce, 0, 0), walkForceMode);
+        float rightLeft = moveRL.ReadValue<float>();
+        rb.AddForce(new Vector3(rightLeft * walkForce, 0, 0), walkForceMode);
         float fb = moveFB.ReadValue<float>();
         rb.AddForce(new Vector3(0, 0, fb * walkForce), walkForceMode);
-        if (playerWantsToJump) {            // Since it is active only once per frame, and FixedUpdate may not run in that frame!
-                rb.velocity = new Vector3(rb.velocity.x * slowDownAtJump, rb.velocity.y, rb.velocity.z);
-                rb.AddForce(new Vector3(0, jumpImpulse, 0), jumpForceMode);
-                playerWantsToJump = false;
-            }
-        
+        if (playerWantsToJump)
+        {            // Since it is active only once per frame, and FixedUpdate may not run in that frame!
+            rb.velocity = new Vector3(rb.velocity.x * slowDownAtJump, rb.velocity.y, rb.velocity.z);
+            rb.AddForce(new Vector3(0, jumpImpulse, 0), jumpForceMode);
+            playerWantsToJump = false;
+        }
+
     }
 }

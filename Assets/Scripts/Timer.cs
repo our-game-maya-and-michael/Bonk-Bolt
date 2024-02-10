@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //https://www.youtube.com/watch?v=HmHPJL-OcQE&t=638s&ab_channel=GameDevBeginner
 
@@ -14,7 +15,7 @@ public class Timer : MonoBehaviour
 
     [Tooltip("dispay text")]
     [SerializeField]
-    TextMeshPro timeText;
+    Text timeText;
 
     [Tooltip("lose scene if player ran out of time")]
     [SerializeField]

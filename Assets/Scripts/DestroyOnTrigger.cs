@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DestroyOnTrigger : MonoBehaviour
 {
+    public Text playersLeftText;
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
     [SerializeField] string triggeringTag;
 
     [Tooltip("Number of players to catch in this level")]
     [SerializeField]
-    int triggeringCount;
+    public int triggeringCount;
 
     [Tooltip("next scene")]
     [SerializeField]
@@ -32,6 +34,6 @@ public class DestroyOnTrigger : MonoBehaviour
 
     private void Update()
     {
-        /* Just to show the enabled checkbox in Editor */
+        playersLeftText.text = "Players left to catch: " + triggeringCount;
     }
 }
