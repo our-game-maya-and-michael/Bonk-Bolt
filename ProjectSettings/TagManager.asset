@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Catcher
   - Obstacle
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Catcher
   - Water
   - UI
   - 
