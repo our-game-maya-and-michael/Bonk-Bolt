@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/level 1/level 1.unity
+    path: Assets/Scenes/level 1/First Test Level.unity
     guid: beeb3bc40efddf84c945fa64b2991865
   - enabled: 0
     path: Assets/Scenes/LoseGame.unity

@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,7 @@ public class InputManager : MonoBehaviour
 
     public bool shift_Input;
     public bool jump_Input;
+    public bool slap_Input;
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Shift.performed += i => shift_Input = true;
             playerControls.PlayerActions.Shift.canceled += i => shift_Input = false;
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
+            playerControls.PlayerActions.Slap.performed += i => slap_Input = true;
         }
 
         playerControls.Enable();
@@ -54,6 +57,7 @@ public class InputManager : MonoBehaviour
         HandleMovementInput();
         HandleSprintingInput();
         HandleJumpingInput();
+        HandleSlapInput();
         // HandleActionInput
     }
 
@@ -88,6 +92,15 @@ public class InputManager : MonoBehaviour
         {
             jump_Input = false;
             playerLocomotion.HandleJumping();
+        }
+    }
+
+    private void HandleSlapInput()
+    {
+        if (slap_Input)
+        {
+            slap_Input = false;
+            playerLocomotion.HandleSlapping();
         }
     }
 }

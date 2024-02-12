@@ -34,6 +34,26 @@ public class CameraManager : MonoBehaviour
         targetTransform = FindObjectOfType<PlayerManager>().transform;
         cameraTransform = Camera.main.transform;
         defualtPosition = cameraTransform.localPosition.z;
+
+    }
+
+    void Start()
+    {
+        // Lock the cursor to the center of the screen
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Hide the cursor
+        Cursor.visible = false;
+    }
+
+    void Update()
+    {
+        // Press ESC to unlock and show the cursor
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void HandleAllCameraMovement()

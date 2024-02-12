@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform playerTransform; // Player's transform
-    public float distanceFromPlayer = 10.0f; // Distance between the camera and the player
+    public float distanceFromPlayer = 5.0f; // Distance between the camera and the player
     public float currentX = 0.0f; // Current X rotation
     public float currentY = 0.0f; // Current Y rotation
     public float sensitivityX = 4.0f; // Sensitivity of mouse movement in X direction

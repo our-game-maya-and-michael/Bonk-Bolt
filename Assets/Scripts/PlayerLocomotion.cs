@@ -36,6 +36,9 @@ public class PlayerLocomotion : MonoBehaviour
     public float jumpHeight = 3;
     public float gravityIntensity = -15;
 
+    [Header("Slap flags")]
+    public bool isSlapping;
+
     private void Awake()
     {
         playerManager = GetComponent<PlayerManager>();
@@ -92,7 +95,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void HandleRotation()
     {
-        if(isJumping)
+        if (isJumping)
         {
             return;
         }
@@ -104,7 +107,7 @@ public class PlayerLocomotion : MonoBehaviour
         targetDiraction.Normalize();
         targetDiraction.y = 0;
 
-        if(targetDiraction == Vector3.zero)
+        if (targetDiraction == Vector3.zero)
         {
             targetDiraction = transform.forward;
         }
@@ -137,7 +140,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (Physics.SphereCast(rayCastOrigin, 0.2f, -Vector3.up, out hit, maxDistance, groundLayer))
         {
-            if(!isGrounded && !playerManager.isInteracting)
+            if (!isGrounded && !playerManager.isInteracting)
             {
                 animatorManager.PlayTargetAnimation("Land", true);
             }
@@ -177,5 +180,11 @@ public class PlayerLocomotion : MonoBehaviour
             playerVelocity.y = jumpingVelocity;
             playerRigidBody.velocity = playerVelocity;
         }
+    }
+
+    public void HandleSlapping()
+    {
+        animatorManager.animator.SetBool("isSlapping", true);
+        animatorManager.PlayTargetAnimation("Slap", false);
     }
 }

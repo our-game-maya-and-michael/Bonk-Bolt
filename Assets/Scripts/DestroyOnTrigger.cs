@@ -19,12 +19,24 @@ public class DestroyOnTrigger : MonoBehaviour
     [SerializeField]
     string nextScene;
 
-    private void OnTriggerEnter(Collider other)
+    private PlayerLocomotion playerLocomotion;
+    private InputManager inputManager;
+    private AnimatorManager animatorManager;
+
+    private void Awake()
     {
-        if (other.tag == triggeringTag)
+        animatorManager = GetComponent<AnimatorManager>();
+        playerLocomotion = GetComponent<PlayerLocomotion>();
+        inputManager = GetComponent<InputManager>();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == triggeringTag && animatorManager.animator.GetBool("isSlapping"))
         {
             triggeringCount--;
             Destroy(other.gameObject);
+
             if (triggeringCount == 0)
             {
                 SceneManager.LoadScene(nextScene);
