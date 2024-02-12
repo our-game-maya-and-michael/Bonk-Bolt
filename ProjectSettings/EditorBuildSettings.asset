@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TimmyTestLevel/Timmy.unity
     guid: 92885cd7f8544964092f5fb2049f7a69
+  - enabled: 1
+    path: Assets/Scenes/Tutorial/Tutorial.unity
+    guid: 586507c3740386045bc1d9a7ac1e44f1
+  - enabled: 1
+    path: Assets/Scenes/level 1/level 1.unity
+    guid: b0de0711692b843459ecac0863bcc297
   m_configObjects: {}
