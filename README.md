@@ -32,6 +32,7 @@ Intended Platform is PC.[Play game here](https://mayamichael.itch.io/bonk-bolt)
 * [Timmy Movement](https://github.com/our-game-maya-and-michael/Bonk-Bolt/blob/main/Assets/Scripts/TimmyMoves.cs)
 
 #### Credits
+* [Catcher](https://www.mixamo.com/#/)
 * [3rd Person Controller](https://www.youtube.com/watch?v=gdp-O6z8x28&list=PLD_vBJjpCwJsqpD8QRPNPMfVUpPFLVGg4&ab_channel=SebastianGraves)
 * [Custom Skybox](https://www.youtube.com/watch?v=ckgfQdaEdwk&ab_channel=ThegamedevTraum)
 * [Park](https://polyhaven.com/a/green_point_park)
