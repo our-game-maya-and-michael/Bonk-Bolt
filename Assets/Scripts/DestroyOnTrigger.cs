@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class DestroyOnTrigger : MonoBehaviour
 {
-    public Text playersLeftText;
+    public TextMeshProUGUI playersLeftText;
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
     [SerializeField] string triggeringTag;
 
