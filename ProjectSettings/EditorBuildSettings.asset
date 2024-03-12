@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/start game/start.unity
+    path: Assets/Scenes/start game/start screen.unity
     guid: 577f082687feeec45a217ff4026e8155
   - enabled: 1
     path: Assets/Scenes/start game/explanation.unity
@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/start game/Tutorial.unity
     guid: 2af2ca5d842d78c43a24db6ea7ef82e3
+  - enabled: 1
+    path: Assets/Scenes/start game/start game button.unity
+    guid: 87251cfcddef9aa4e880c04c8a859002
   - enabled: 1
     path: Assets/Scenes/level 1/level 1.unity
     guid: b0de0711692b843459ecac0863bcc297
@@ -29,7 +32,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level 4/WinGame.unity
     guid: 5c18d6275b0aa024aa61d6b8fd297613
-  - enabled: 1
-    path: Assets/Scenes/TimmyTestLevel/Timmy.unity
-    guid: 92885cd7f8544964092f5fb2049f7a69
   m_configObjects: {}

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 //https://www.youtube.com/watch?v=HmHPJL-OcQE&t=638s&ab_channel=GameDevBeginner
 
@@ -17,9 +18,11 @@ public class Timer : MonoBehaviour
     [SerializeField]
     Text timeText;
 
-    [Tooltip("lose scene if player ran out of time")]
-    [SerializeField]
-    string loseScene;
+    [SerializeField] GameObject timeOutMenu;
+
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject enemies;
+
 
     // Update is called once per frame
     void Update()
@@ -30,7 +33,10 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(loseScene);
+            player.GetComponent<InputManager>().enabled = false;
+            enemies.SetActive(false);
+            Debug.Log("time out");
+            timeOutMenu.SetActive(true);
         }
         DisablayTime(timeValue);
     }

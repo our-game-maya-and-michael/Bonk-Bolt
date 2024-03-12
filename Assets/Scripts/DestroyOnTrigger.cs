@@ -16,9 +16,10 @@ public class DestroyOnTrigger : MonoBehaviour
     [SerializeField]
     public int triggeringCount;
 
-    [Tooltip("next scene")]
-    [SerializeField]
-    string nextScene;
+    [Tooltip("next level")]
+    [SerializeField] GameObject nextLevel;
+
+    [SerializeField] GameObject enemies;
 
     private PlayerLocomotion playerLocomotion;
     private InputManager inputManager;
@@ -40,7 +41,9 @@ public class DestroyOnTrigger : MonoBehaviour
 
             if (triggeringCount == 0)
             {
-                SceneManager.LoadScene(nextScene);
+                GetComponent<InputManager>().enabled = false;
+                enemies.SetActive(false);
+                nextLevel.SetActive(true);
             }
         }
     }

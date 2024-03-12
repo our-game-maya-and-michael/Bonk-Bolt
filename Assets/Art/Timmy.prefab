@@ -1020,6 +1020,7 @@ MonoBehaviour:
   horizontalInput: 0
   shift_Input: 0
   jump_Input: 0
+  slap_Input: 0
 --- !u!114 &3191446204006788134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,6 +1050,7 @@ MonoBehaviour:
   rotationSpeed: 15
   jumpHeight: 3
   gravityIntensity: -15
+  isSlapping: 0
 --- !u!114 &2409890785057442816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,7 +1129,7 @@ MonoBehaviour:
   playersLeftText: {fileID: 0}
   triggeringTag: Player
   triggeringCount: 3
-  nextScene: level 2
+  nextLevel: {fileID: 0}
 --- !u!95 &264501302400027678
 Animator:
   serializedVersion: 5

@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerFell : MonoBehaviour
 {
-    public string losingScene;
+    [SerializeField] GameObject playerFellMenu;
+
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject enemies;
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Catcher"))
         {
-            SceneManager.LoadScene(losingScene);
+            player.GetComponent<InputManager>().enabled = false;
+            enemies.SetActive(false);
+            playerFellMenu.SetActive(true);
         }
     }
 }
