@@ -16,6 +16,10 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     Transform centerPoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
 
+    private float lastDestinationSetTime = 0f;
+    [SerializeField]
+    float stuckTimeout = 2f; // Change this value to adjust the stuck timeout duration
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -31,6 +35,20 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
                 agent.SetDestination(point);
+            }
+        }
+        else
+        {
+            // If the game object has been stuck for a certain amount of time, set a new destination
+            if (Time.time - lastDestinationSetTime > stuckTimeout)
+            {
+                Vector3 point;
+                if (RandomPoint(centerPoint.position, range, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                    agent.SetDestination(point);
+                    lastDestinationSetTime = Time.time;
+                }
             }
         }
 

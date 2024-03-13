@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27780906a9bf0664eba5adb25c23a343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 11
+  timeValue: 15
   timeText: {fileID: 103433655}
   timeOutMenu: {fileID: 1172376373}
   player: {fileID: 1320524754}
