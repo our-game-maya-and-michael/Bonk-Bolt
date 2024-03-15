@@ -3332,6 +3332,10 @@ PrefabInstance:
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 1982611763}
+    - target: {fileID: 8302694193814215019, guid: c8c389183b4f6674092c056742f95067, type: 3}
+      propertyPath: goToWhenCaught
+      value: 
+      objectReference: {fileID: 1982611763}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4694,6 +4698,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9146842973112866202, guid: 0a84aa2147c969d48add789349049350, type: 3}
       propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 1982611763}
+    - target: {fileID: 9146842973112866202, guid: 0a84aa2147c969d48add789349049350, type: 3}
+      propertyPath: goToWhenCaught
       value: 
       objectReference: {fileID: 1982611763}
     m_RemovedComponents: []
@@ -7072,6 +7080,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7449673629845740776, guid: 5199b6027ecee354d869db2a78ef3509, type: 3}
       propertyPath: centerPoint
+      value: 
+      objectReference: {fileID: 1982611763}
+    - target: {fileID: 7449673629845740776, guid: 5199b6027ecee354d869db2a78ef3509, type: 3}
+      propertyPath: goToWhenCaught
       value: 
       objectReference: {fileID: 1982611763}
     - target: {fileID: 8205511570777069410, guid: 5199b6027ecee354d869db2a78ef3509, type: 3}

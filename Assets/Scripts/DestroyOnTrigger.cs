@@ -18,12 +18,12 @@ public class DestroyOnTrigger : MonoBehaviour
 
     [Tooltip("next level")]
     [SerializeField] GameObject nextLevel;
-
     [SerializeField] GameObject enemies;
 
     private PlayerLocomotion playerLocomotion;
     private InputManager inputManager;
     private AnimatorManager animatorManager;
+    private RandomMovement otherGuy;
 
     private void Awake()
     {
@@ -34,10 +34,11 @@ public class DestroyOnTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == triggeringTag && animatorManager.animator.GetBool("isSlapping"))
+        if (other.tag == triggeringTag && animatorManager.animator.GetBool("isSlapping") && !other.GetComponent<RandomMovement>().GetCaught())
         {
+            other.GetComponent<RandomMovement>().SetCaught();
             triggeringCount--;
-            Destroy(other.gameObject);
+            Debug.Log(triggeringCount);
 
             if (triggeringCount == 0)
             {

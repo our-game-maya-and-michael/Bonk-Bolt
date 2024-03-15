@@ -16,7 +16,12 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     Transform centerPoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
 
+    [SerializeField]
+    Transform goToWhenCaught;
+
     private float lastDestinationSetTime = 0f;
+    private bool isCaught = false;
+
     [SerializeField]
     float stuckTimeout = 2f; // Change this value to adjust the stuck timeout duration
 
@@ -25,10 +30,14 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
         agent = GetComponent<NavMeshAgent>();
     }
 
-
     void Update()
     {
-        if (agent.remainingDistance <= agent.stoppingDistance) //done with path
+        if (isCaught)
+        {
+            agent.SetDestination(goToWhenCaught.position);
+        }
+
+        else if (agent.remainingDistance <= agent.stoppingDistance) //done with path
         {
             Vector3 point;
             if (RandomPoint(centerPoint.position, range, out point)) //pass in our center point and radius of area
@@ -37,6 +46,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
                 agent.SetDestination(point);
             }
         }
+        
         else
         {
             // If the game object has been stuck for a certain amount of time, set a new destination
@@ -51,11 +61,10 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
                 }
             }
         }
-
     }
+
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
@@ -65,10 +74,17 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
             result = hit.position;
             return true;
         }
-
         result = Vector3.zero;
         return false;
     }
 
+    public void SetCaught()
+    {
+        this.isCaught = true;
+    }
 
+    public bool GetCaught()
+    {
+        return this.isCaught;
+    }
 }
