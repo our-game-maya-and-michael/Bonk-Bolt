@@ -9665,6 +9665,14 @@ PrefabInstance:
       value: start game button
       objectReference: {fileID: 0}
     - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: armTransform
+      value: 
+      objectReference: {fileID: 1698483282}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7, type: 3}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
       propertyPath: playersLeftText
       value: 
       objectReference: {fileID: 1264173482}
@@ -9680,6 +9688,11 @@ PrefabInstance:
 --- !u!4 &1698483281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1693433095310697800, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+  m_PrefabInstance: {fileID: 1698483280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1698483282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5013991606794083184, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
   m_PrefabInstance: {fileID: 1698483280}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1737877203 stripped

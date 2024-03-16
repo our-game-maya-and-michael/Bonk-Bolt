@@ -24,7 +24,11 @@ public class DestroyOnTrigger : MonoBehaviour
     [Tooltip("The sound of being hit")]
     [SerializeField]
     public AudioClip hitClip; // Assign this in the inspector.
-    public float volume = 0.3f; // Default volume level. Adjust this value between 0.0 and 1.0 
+    public float volume = 0.3f; // Default volume level. Adjust this value between 0.0 and 1.0
+
+    [Tooltip("The effect to show when hitting someone")]
+    [SerializeField] GameObject hitEffectPrefab; // Assign this in the inspector.
+    public Transform armTransform; // Assign this in the inspector to your arm's transform
 
     private PlayerLocomotion playerLocomotion;
     private InputManager inputManager;
@@ -48,6 +52,8 @@ public class DestroyOnTrigger : MonoBehaviour
             audioSource.loop = false; // Dont loop the hit sound
             audioSource.volume = volume; // Set the volume
             audioSource.Play();
+
+            Instantiate(hitEffectPrefab, armTransform.position, armTransform.rotation);
 
             other.GetComponent<RandomMovement>().SetCaught();
 

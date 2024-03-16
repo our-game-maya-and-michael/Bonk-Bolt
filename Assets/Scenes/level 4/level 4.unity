@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47329938, g: 0.48357385, b: 0.48663694, a: 1}
+  m_IndirectSpecularColor: {r: 0.70236427, g: 0.69701064, b: 0.66307217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -42139,6 +42139,14 @@ PrefabInstance:
       value: WinGame
       objectReference: {fileID: 0}
     - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: armTransform
+      value: 
+      objectReference: {fileID: 1880378950}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7, type: 3}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
       propertyPath: playersLeftText
       value: 
       objectReference: {fileID: 1606034333}
@@ -42154,6 +42162,11 @@ PrefabInstance:
 --- !u!4 &1880378949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1693433095310697800, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+  m_PrefabInstance: {fileID: 1880378948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1880378950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5013991606794083184, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
   m_PrefabInstance: {fileID: 1880378948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1881071329
