@@ -38266,6 +38266,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 394807107}
     - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: hitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7196114ee70e4de2bb84a96cfa3c680, type: 3}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
       propertyPath: nextLevel
       value: 
       objectReference: {fileID: 870415113}

@@ -5,6 +5,7 @@ using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class DestroyOnTrigger : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class DestroyOnTrigger : MonoBehaviour
     [Tooltip("next level")]
     [SerializeField] GameObject nextLevel;
     [SerializeField] GameObject enemies;
+
+    [Tooltip("The sound of being hit")]
+    [SerializeField]
+    public AudioClip hitClip; // Assign this in the inspector.
+    public float volume = 0.3f; // Default volume level. Adjust this value between 0.0 and 1.0 
 
     private PlayerLocomotion playerLocomotion;
     private InputManager inputManager;
@@ -36,6 +42,12 @@ public class DestroyOnTrigger : MonoBehaviour
     {
         if (other.tag == triggeringTag && animatorManager.animator.GetBool("isSlapping") && !other.GetComponent<RandomMovement>().GetCaught())
         {
+            AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = hitClip;
+            audioSource.loop = false; // Dont loop the hit sound
+            audioSource.volume = volume; // Set the volume
+            audioSource.Play();
+
             other.GetComponent<RandomMovement>().SetCaught();
             triggeringCount--;
             Debug.Log(triggeringCount);
