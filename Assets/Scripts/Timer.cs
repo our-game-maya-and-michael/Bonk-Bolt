@@ -20,9 +20,6 @@ public class Timer : MonoBehaviour
 
     [SerializeField] GameObject timeOutMenu;
 
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject enemies;
-
 
     // Update is called once per frame
     void Update()
@@ -33,8 +30,6 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            player.GetComponent<InputManager>().enabled = false;
-            enemies.SetActive(false);
             Debug.Log("time out");
             timeOutMenu.SetActive(true);
         }

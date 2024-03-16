@@ -19,7 +19,7 @@ public class DestroyOnTrigger : MonoBehaviour
 
     [Tooltip("next level")]
     [SerializeField] GameObject nextLevel;
-    [SerializeField] GameObject enemies;
+    [SerializeField] GameObject timer=null;
 
     [Tooltip("The sound of being hit")]
     [SerializeField]
@@ -38,6 +38,7 @@ public class DestroyOnTrigger : MonoBehaviour
         inputManager = GetComponent<InputManager>();
     }
 
+    [System.Obsolete]
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == triggeringTag && animatorManager.animator.GetBool("isSlapping") && !other.GetComponent<RandomMovement>().GetCaught())
@@ -49,13 +50,30 @@ public class DestroyOnTrigger : MonoBehaviour
             audioSource.Play();
 
             other.GetComponent<RandomMovement>().SetCaught();
+
+            Transform arrow = other.transform.FindChild("Arrow");
+            if (arrow != null)
+            {
+                arrow.gameObject.SetActive(false);
+            }
+
+            Transform caught = other.transform.FindChild("caught");
+            if(caught != null)
+            {
+                caught.gameObject.SetActive(true);
+            }
+
             triggeringCount--;
             Debug.Log(triggeringCount);
 
             if (triggeringCount == 0)
             {
                 GetComponent<InputManager>().enabled = false;
-                enemies.SetActive(false);
+                if(timer!=null)
+                {
+                    timer.SetActive(false);
+
+                }
                 nextLevel.SetActive(true);
             }
         }
