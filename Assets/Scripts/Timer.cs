@@ -32,6 +32,8 @@ public class Timer : MonoBehaviour
         {
             Debug.Log("time out");
             timeOutMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; // Unlocks the cursor
+            Cursor.visible = true; // Makes the cursor visible
         }
         DisablayTime(timeValue);
     }

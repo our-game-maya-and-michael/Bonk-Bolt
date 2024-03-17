@@ -13,6 +13,8 @@ public class PlayerFell : MonoBehaviour
         if (other.gameObject.CompareTag("Catcher"))
         {
             playerFellMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; // Unlocks the cursor
+            Cursor.visible = true; // Makes the cursor visible
         }
     }
 }

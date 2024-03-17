@@ -7092,6 +7092,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 103433653}
     - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
+      propertyPath: volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892328602869640320, guid: 9e6fc6540cc572f4bb9485a3c6a707fe, type: 3}
       propertyPath: enemies
       value: 
       objectReference: {fileID: 596892765}
