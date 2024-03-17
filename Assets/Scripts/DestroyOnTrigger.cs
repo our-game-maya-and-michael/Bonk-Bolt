@@ -12,20 +12,16 @@ public class DestroyOnTrigger : MonoBehaviour
     public TextMeshProUGUI playersLeftText;
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
     [SerializeField] string triggeringTag;
-
     [Tooltip("Number of players to catch in this level")]
     [SerializeField]
     public int triggeringCount;
-
     [Tooltip("next level")]
     [SerializeField] GameObject nextLevel;
-    [SerializeField] GameObject timer=null;
-
+    [SerializeField] GameObject timer = null;
     [Tooltip("The sound of being hit")]
     [SerializeField]
     public AudioClip hitClip;// Assign this in the inspector.
     public float volume = 0.3f;// Default volume level. Adjust this value between 0.0 and 1.0
-
     [Tooltip("The effect to show when hitting someone")]
     [SerializeField] GameObject hitEffectPrefab;// Assign this in the inspector.
     public Transform armTransform;// Assign this in the inspector to your arm's transform
@@ -64,25 +60,24 @@ public class DestroyOnTrigger : MonoBehaviour
             }
 
             Transform caught = other.transform.FindChild("caught");
-            if(caught != null)
+            if (caught != null)
             {
                 caught.gameObject.SetActive(true);
             }
-
             triggeringCount--;
             Debug.Log(triggeringCount);
 
             if (triggeringCount == 0)
             {
                 GetComponent<InputManager>().enabled = false;
-                if(timer!=null)
+                if (timer != null)
                 {
                     timer.SetActive(false);
 
                 }
                 nextLevel.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;// Unlocks the cursor
-                Cursor.visible = true;// Makes the cursor visible
+                Cursor.lockState = CursorLockMode.None;//Unlocks the cursor
+                Cursor.visible = true;//Makes the cursor visible
             }
         }
     }
